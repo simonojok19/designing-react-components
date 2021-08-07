@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { data } from "../SpeakerData";
 
-export default function useRequestSpeaker() {
+export default function useRequestSpeaker(delayTime = 2000) {
   const [speakerData, setSpeakerData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -12,7 +12,7 @@ export default function useRequestSpeaker() {
   useEffect(() => {
     async function delayFunc() {
       try {
-        await delay(2000);
+        await delay(delayTime);
         setIsLoading(false);
         setSpeakerData(data);
       } catch (e) {
@@ -38,4 +38,5 @@ export default function useRequestSpeaker() {
       setSpeakerData(speakers);
     };
   };
+  return { speakerData, isLoading, hasError, error, onFavoriteToggle };
 }
