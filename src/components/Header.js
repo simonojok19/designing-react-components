@@ -12,7 +12,7 @@ export default function Header() {
             <h4 className="header-title">Silicon Valley Code Camp</h4>
           </div>
           <div className="text-dark">
-            Hello Mr. Smith &nbsp;$nbsp;
+            Hello Mr. Smith &nbsp;&nbsp;
             <span>
               <a href="#">sign-out</a>
             </span>
