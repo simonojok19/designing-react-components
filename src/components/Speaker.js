@@ -29,10 +29,10 @@ const SpeakerImage = ({ id, first, last }) => {
   );
 };
 
-const SpeakerFavorite = ({ favorite }) => {
+const SpeakerFavorite = ({ favorite, onFavoriteToggle }) => {
   return (
     <div className="action padB1">
-      <span>
+      <span onClick={onFavoriteToggle}>
         <i
           className={
             favorite === true ? "fa fa-star orange" : "fa fa-star-o orange"
@@ -51,6 +51,7 @@ const SpeakerDemographics = ({
   twitterHandle,
   favorite,
   company,
+  onFavoriteToggle,
 }) => {
   return (
     <div className="speaker-info">
@@ -59,7 +60,10 @@ const SpeakerDemographics = ({
           {first} {last}
         </h3>
       </div>
-      <SpeakerFavorite favorite={favorite} />
+      <SpeakerFavorite
+        favorite={favorite}
+        onFavoriteToggle={onFavoriteToggle}
+      />
       <div>
         <p className="card-description">{bio}</p>
         <div className="social d-flex flex-row mt-4">
@@ -77,7 +81,7 @@ const SpeakerDemographics = ({
   );
 };
 
-const Speaker = ({ speaker, showSessions }) => {
+const Speaker = ({ speaker, showSessions, onFavoriteToggle }) => {
   const { id, first, last, sessions } = speaker;
   return (
     <div
@@ -86,7 +90,7 @@ const Speaker = ({ speaker, showSessions }) => {
     >
       <div className="card card-height p-4 mt-4">
         <SpeakerImage id={id} first={first} last={last} />
-        <SpeakerDemographics {...speaker} />
+        <SpeakerDemographics {...speaker} onFavoriteToggle={onFavoriteToggle} />
         {showSessions && <Sessions sessions={sessions} />}
       </div>
     </div>

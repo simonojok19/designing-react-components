@@ -4,6 +4,8 @@ import { data } from "../../SpeakerData";
 
 export default function SpeakersList({ showSessions }) {
   const [speakerData, setSpeakerData] = useState(data);
+
+  const onFavoriteToggle = () => {};
   return (
     <div className="container speakers-list">
       <div className="row">
@@ -13,6 +15,7 @@ export default function SpeakersList({ showSessions }) {
               key={speaker.id}
               speaker={speaker}
               showSessions={showSessions}
+              onFavoriteToggle={onFavoriteToggle}
             />
           );
         })}
