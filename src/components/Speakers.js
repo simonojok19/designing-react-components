@@ -10,7 +10,7 @@ export default function Speakers() {
     <div
       className={theme === "light" ? "container-fluid" : "container-fluid dark"}
     >
-      <Header />
+      <Header theme={theme} />
       <SpeakersToolbar theme={theme} setTheme={setTheme} />
       <SpeakersList data={data} />
     </div>
