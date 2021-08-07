@@ -4,7 +4,7 @@ import SpeakersList from "./SpeakersList";
 import Header from "./Header";
 import SpeakersToolbar from "./SpeakersToolbar";
 
-export default function Speakers() {
+export default function App() {
   const [theme, setTheme] = useState("light");
   return (
     <div

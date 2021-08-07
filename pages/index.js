@@ -1,8 +1,8 @@
 import React from "react";
-import Speakers from "../src/components/Speakers";
+import App from "../src/components/App";
 
 const IndexPage = () => {
-  return <Speakers />;
+  return <App />;
 };
 
 export default IndexPage;
