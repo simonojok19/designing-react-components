@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { data } from "../SpeakerData";
 
+const STATUS = {
+  LOADING: "loading",
+  SUCCESS: "success",
+  FAILURE: "failure",
+};
+
+export { STATUS };
+
 export default function useRequestSpeaker(delayTime = 2000) {
   const [speakerData, setSpeakerData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
+  const [status, setStatus] = useState(STATUS.LOADING);
   const [error, setError] = useState("");
 
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -13,11 +20,10 @@ export default function useRequestSpeaker(delayTime = 2000) {
     async function delayFunc() {
       try {
         await delay(delayTime);
-        setIsLoading(false);
+        setStatus(STATUS.SUCCESS);
         setSpeakerData(data);
       } catch (e) {
-        setIsLoading(false);
-        setHasError(true);
+        setStatus(STATUS.FAILURE);
         setError(e);
       }
     }
@@ -38,5 +44,5 @@ export default function useRequestSpeaker(delayTime = 2000) {
       setSpeakerData(speakers);
     };
   };
-  return { speakerData, isLoading, hasError, error, onFavoriteToggle };
+  return { speakerData, status, error, onFavoriteToggle };
 }
