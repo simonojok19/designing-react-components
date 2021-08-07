@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Speaker from "./Speaker";
-import { data } from "../../SpeakerData";
 import ReactPlaceholder from "react-placeholder";
 import useRequestSpeaker, { STATUS } from "../../hooks/useRequestSpeaker";
 
