@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { data } from "../../SpeakerData";
-import SpeakersList from "./SpeakersList";
 import Header from "./Header";
-import SpeakersToolbar from "./SpeakersToolbar";
+import Speakers from "./Speakers";
 
 export default function App() {
   const [theme, setTheme] = useState("light");
@@ -11,8 +10,7 @@ export default function App() {
       className={theme === "light" ? "container-fluid" : "container-fluid dark"}
     >
       <Header theme={theme} />
-      <SpeakersToolbar theme={theme} setTheme={setTheme} />
-      <SpeakersList data={data} />
+      <Speakers data={data} setTheme={setTheme} theme={theme} />
     </div>
   );
 }
