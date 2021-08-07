@@ -47,33 +47,29 @@ const SpeakerDemographics = ({ first, last, bio, twitterHandle, favorite }) => {
   );
 };
 
+const Speaker = ({ speaker }) => {
+  const { id, bio, first, last, favorite, twitterHandle, company, sessions } =
+    speaker;
+  return (
+    <div
+      key={id}
+      className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-sm-12 col-xs-12"
+    >
+      <div className="card card-height p-4 mt-4">
+        <SpeakerImage id={id} first={first} last={last} />
+        <SpeakerDemographics {...speaker} />
+        <Sessions sessions={sessions} />
+      </div>
+    </div>
+  );
+};
+
 const IndexPage = () => {
   return (
     <div className="container speakers-list">
       <div className="row">
         {data.map((speaker) => {
-          const {
-            id,
-            bio,
-            first,
-            last,
-            favorite,
-            twitterHandle,
-            company,
-            sessions,
-          } = speaker;
-          return (
-            <div
-              key={id}
-              className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-sm-12 col-xs-12"
-            >
-              <div className="card card-height p-4 mt-4">
-                <SpeakerImage id={id} first={first} last={last} />
-                <SpeakerDemographics {...speaker} />
-                <Sessions sessions={sessions} />
-              </div>
-            </div>
-          );
+          return <Speaker key={speaker.id} speaker={speaker} />;
         })}
       </div>
     </div>
