@@ -1,13 +1,18 @@
 import React from "react";
-import { data } from "../../SpeakerData";
 import Speaker from "./Speaker";
 
-export default function SpeakersList() {
+export default function SpeakersList({ data, showSessions }) {
   return (
     <div className="container speakers-list">
       <div className="row">
         {data.map((speaker) => {
-          return <Speaker key={speaker.id} speaker={speaker} />;
+          return (
+            <Speaker
+              key={speaker.id}
+              speaker={speaker}
+              showSessions={showSessions}
+            />
+          );
         })}
       </div>
     </div>

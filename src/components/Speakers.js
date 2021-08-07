@@ -12,7 +12,7 @@ export default function Speakers({ theme, setTheme, data }) {
         showSessions={showSessions}
         setShowSessions={setShowSessions}
       />
-      <SpeakersList data={data} />
+      <SpeakersList data={data} showSessions={showSessions} />
     </>
   );
 }

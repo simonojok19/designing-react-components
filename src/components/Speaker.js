@@ -61,7 +61,7 @@ const SpeakerDemographics = ({
   );
 };
 
-const Speaker = ({ speaker }) => {
+const Speaker = ({ speaker, showSessions }) => {
   const { id, bio, first, last, favorite, twitterHandle, company, sessions } =
     speaker;
   return (
