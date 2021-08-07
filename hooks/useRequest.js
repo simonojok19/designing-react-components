@@ -7,8 +7,8 @@ export const STATUS = {
   FAILURE: "failure",
 };
 
-export default function useRequestSpeaker(delayTime = 2000) {
-  const [speakerData, setSpeakerData] = useState([]);
+export default function useRequest(delayTime = 2000, initialData = []) {
+  const [data, setData] = useState(initialData);
   const [status, setStatus] = useState(STATUS.LOADING);
   const [error, setError] = useState("");
 
@@ -19,7 +19,7 @@ export default function useRequestSpeaker(delayTime = 2000) {
       try {
         await delay(delayTime);
         setStatus(STATUS.SUCCESS);
-        setSpeakerData(data);
+        setData(data);
       } catch (e) {
         setStatus(STATUS.FAILURE);
         setError(e);
@@ -28,19 +28,22 @@ export default function useRequestSpeaker(delayTime = 2000) {
     delayFunc().then((r) => console.log(r));
   }, []);
 
-  const onFavoriteToggle = (id) => {
+  const updateRecord = (record) => {
     return () => {
-      const speakers = speakerData.map((speaker) => {
-        if (speaker.id === id) {
-          return {
-            ...speaker,
-            favorite: !speaker.favorite,
-          };
-        }
-        return speaker;
+      const records = data.map((rec) => {
+        return rec.id === record.id ? record : rec;
       });
-      setSpeakerData(speakers);
+      async function delayFunction() {
+        try {
+          await delay(delayTime);
+          setData(record);
+        } catch (e) {
+          console.error(e);
+        }
+      }
+      delayFunction().then();
+      setData(records);
     };
   };
-  return { speakerData, status, error, onFavoriteToggle };
+  return { speakerData: data, status, error, onFavoriteToggle: updateRecord };
 }

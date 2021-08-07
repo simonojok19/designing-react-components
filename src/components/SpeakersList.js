@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Speaker from "./Speaker";
 import ReactPlaceholder from "react-placeholder";
-import useRequestSpeaker, { STATUS } from "../../hooks/useRequestSpeaker";
+import useRequest, { STATUS } from "../../hooks/useRequest";
 
 export default function SpeakersList({ showSessions }) {
-  const { speakerData, status, error, onFavoriteToggle } =
-    useRequestSpeaker(2000);
+  const { speakerData, status, error, onFavoriteToggle } = useRequest(2000);
 
   if (status === STATUS.FAILURE) {
     return (
