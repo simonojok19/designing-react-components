@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { data } from "../SpeakerData";
 
-const STATUS = {
+export const STATUS = {
   LOADING: "loading",
   SUCCESS: "success",
   FAILURE: "failure",
 };
-
-export { STATUS };
 
 export default function useRequestSpeaker(delayTime = 2000) {
   const [speakerData, setSpeakerData] = useState([]);

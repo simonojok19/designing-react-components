@@ -21,7 +21,7 @@ export default function SpeakersList({ showSessions }) {
         type="media"
         rows={15}
         className="speakerslist-placeholder"
-        ready={STATUS === STATUS.SUCCESS}
+        ready={STATUS !== STATUS.LOADING}
       >
         <div className="row">
           {speakerData.map((speaker) => {
