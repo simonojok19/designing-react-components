@@ -36,13 +36,12 @@ export default function useRequest(delayTime = 2000, initialData = []) {
       async function delayFunction() {
         try {
           await delay(delayTime);
-          setData(record);
+          setData(records);
         } catch (e) {
           console.error("error thrown inside delayFunction", e);
         }
       }
       delayFunction().then();
-      setData(records);
     };
   };
   return { data, status, error, updateRecord };

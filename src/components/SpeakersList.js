@@ -29,19 +29,20 @@ export default function SpeakersList({ showSessions }) {
         ready={STATUS !== STATUS.LOADING}
       >
         <div className="row">
-          {speakerData.map((speaker) => {
-            return (
-              <Speaker
-                key={speaker.id}
-                speaker={speaker}
-                showSessions={showSessions}
-                onFavoriteToggle={updateRecord({
-                  ...speaker,
-                  favorite: !speaker.favorite,
-                })}
-              />
-            );
-          })}
+          {speakerData &&
+            speakerData.map((speaker) => {
+              return (
+                <Speaker
+                  key={speaker.id}
+                  speaker={speaker}
+                  showSessions={showSessions}
+                  onFavoriteToggle={updateRecord({
+                    ...speaker,
+                    favorite: !speaker.favorite,
+                  })}
+                />
+              );
+            })}
         </div>
       </ReactPlaceholder>
     </div>
