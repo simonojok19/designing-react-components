@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Speaker from "./Speaker";
 import ReactPlaceholder from "react-placeholder";
 import useRequest, { STATUS } from "../../hooks/useRequest";
+import { data } from "../../SpeakerData";
 
 export default function SpeakersList({ showSessions }) {
-  const { speakerData, status, error, onFavoriteToggle } = useRequest(2000);
+  const {
+    data: speakerData,
+    status,
+    error,
+    updateRecord,
+  } = useRequest(2000, data);
 
   if (status === STATUS.FAILURE) {
     return (
@@ -29,7 +35,10 @@ export default function SpeakersList({ showSessions }) {
                 key={speaker.id}
                 speaker={speaker}
                 showSessions={showSessions}
-                onFavoriteToggle={onFavoriteToggle(speaker.id)}
+                onFavoriteToggle={updateRecord({
+                  ...speaker,
+                  favorite: !speaker.favorite,
+                })}
               />
             );
           })}

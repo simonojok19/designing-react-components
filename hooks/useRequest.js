@@ -45,5 +45,5 @@ export default function useRequest(delayTime = 2000, initialData = []) {
       setData(records);
     };
   };
-  return { speakerData: data, status, error, onFavoriteToggle: updateRecord };
+  return { data, status, error, updateRecord };
 }
