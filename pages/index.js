@@ -30,6 +30,23 @@ const SpeakerImage = ({ id, first, last }) => {
   );
 };
 
+const SpeakerDemographics = ({ first, last, bio, twitterHandle, favorite }) => {
+  return (
+    <div className="speaker-info">
+      <div className="d-flex justify-content-between mb-3">
+        <h3 className="text-truncate w-200">
+          {first} {last}
+        </h3>
+      </div>
+      <div>
+        <p>
+          {bio} {twitterHandle} {favorite}
+        </p>
+      </div>
+    </div>
+  );
+};
+
 const IndexPage = () => {
   return (
     <div className="container speakers-list">
@@ -52,18 +69,7 @@ const IndexPage = () => {
             >
               <div className="card card-height p-4 mt-4">
                 <SpeakerImage id={id} first={first} last={last} />
-                <div className="speaker-info">
-                  <div className="d-flex justify-content-between mb-3">
-                    <h3 className="text-truncate w-200">
-                      {first} {last}
-                    </h3>
-                  </div>
-                  <div>
-                    <p>
-                      {bio} {twitterHandle} {favorite}
-                    </p>
-                  </div>
-                </div>
+                <SpeakerDemographics {...speaker} />
                 <Sessions sessions={sessions} />
               </div>
             </div>
