@@ -9,6 +9,14 @@ const Session = ({ title, room }) => {
   );
 };
 
+const Sessions = ({ sessions }) => {
+  return (
+    <div className="sessionBox card h-250">
+      <Session title={sessions[0].title} room={sessions[0].room.name} />
+    </div>
+  );
+};
+
 const IndexPage = () => {
   return (
     <div className="container speakers-list">
@@ -50,12 +58,7 @@ const IndexPage = () => {
                     </p>
                   </div>
                 </div>
-                <div className="sessionBox card h-250">
-                  <Session
-                    title={sessions[0].title}
-                    room={sessions[0].room.name}
-                  />
-                </div>
+                <Sessions sessions={sessions} />
               </div>
             </div>
           );
