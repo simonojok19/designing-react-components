@@ -1,23 +1,21 @@
-import React, { createContext, useState } from "react";
+import React, { useContext } from "react";
+import ThemeProvider, { ThemeContext } from "../contexts/ThemeContext";
 
-export const ThemeContext = createContext();
+const LayoutNoThemeProvider = ({ children }) => {
+  const { theme } = useContext(ThemeContext);
+  return (
+    <div
+      className={theme === "light" ? "container-fluid" : "container-fluid dark"}
+    >
+      {children}
+    </div>
+  );
+};
 
 export default function Layout({ startingTheme, children }) {
-  const [theme, setTheme] = useState(startingTheme);
   return (
-    <ThemeContext.Provider
-      value={{
-        theme: theme,
-        setTheme: setTheme,
-      }}
-    >
-      <divs
-        className={
-          theme === "light" ? "container-fluid" : "container-fluid dark"
-        }
-      >
-        {children}
-      </divs>
-    </ThemeContext.Provider>
+    <ThemeProvider startingTheme={startingTheme}>
+      <LayoutNoThemeProvider>{children}</LayoutNoThemeProvider>
+    </ThemeProvider>
   );
 }

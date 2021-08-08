@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "./Layout";
-
+import { ThemeContext } from "../contexts/ThemeContext";
 export default function SpeakersToolbar({ showSessions, setShowSessions }) {
   const { theme, setTheme } = useContext(ThemeContext);
 
