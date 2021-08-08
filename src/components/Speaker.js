@@ -30,9 +30,16 @@ const SpeakerImage = ({ id, first, last }) => {
 };
 
 const SpeakerFavorite = ({ favorite, onFavoriteToggle }) => {
+  const doneCallback = () => {
+    console.log("Done Callback");
+  };
   return (
     <div className="action padB1">
-      <span onClick={onFavoriteToggle}>
+      <span
+        onClick={() => {
+          return onFavoriteToggle();
+        }}
+      >
         <i
           className={
             favorite === true ? "fa fa-star orange" : "fa fa-star-o orange"

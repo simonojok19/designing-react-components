@@ -28,7 +28,7 @@ export default function useRequest(delayTime = 2000, initialData = []) {
     delayFunc().then((r) => console.log(r));
   }, []);
 
-  const updateRecord = (record) => {
+  const updateRecord = (record, doneCallback) => {
     return () => {
       const records = data.map((rec) => {
         return rec.id === record.id ? record : rec;
@@ -36,6 +36,9 @@ export default function useRequest(delayTime = 2000, initialData = []) {
       async function delayFunction() {
         try {
           await delay(delayTime);
+          if (doneCallback) {
+            doneCallback();
+          }
           setData(records);
         } catch (e) {
           console.error("error thrown inside delayFunction", e);
