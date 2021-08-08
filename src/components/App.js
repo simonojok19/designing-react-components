@@ -1,15 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, createContext } from "react";
 import Header from "./Header";
 import Speakers from "./Speakers";
+
+export const ThemeContext = createContext();
 
 export default function App() {
   const [theme, setTheme] = useState("light");
   return (
-    <div
-      className={theme === "light" ? "container-fluid" : "container-fluid dark"}
+    <ThemeContext.Provider
+      value={{
+        theme: theme,
+        setTheme: setTheme,
+      }}
     >
-      <Header theme={theme} />
-      <Speakers setTheme={setTheme} theme={theme} />
-    </div>
+      <div
+        className={
+          theme === "light" ? "container-fluid" : "container-fluid dark"
+        }
+      >
+        <Header />
+        <Speakers />
+      </div>
+    </ThemeContext.Provider>
   );
 }

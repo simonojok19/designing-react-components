@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "./App";
 
-export default function Header({ theme }) {
+export default function Header() {
+  const { theme, setTheme } = useContext(ThemeContext);
+
   return (
     <div className="padT4 padB4">
       <div className="container mobile-container">

@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "./App";
 
-export default function SpeakersToolbar({
-  theme,
-  setTheme,
-  showSessions,
-  setShowSessions,
-}) {
+export default function SpeakersToolbar({ showSessions, setShowSessions }) {
+  const { theme, setTheme } = useContext(ThemeContext);
+
   return (
     <section className="toolbar dark-theme-header">
       <div className="container">
@@ -21,7 +19,7 @@ export default function SpeakersToolbar({
                     setShowSessions(event.target.checked);
                   }}
                 />
-                <span className="switch"></span>
+                <span className="switch" />
               </label>
             </li>
             <li className="d-flex flex-column flex-md-row ml-sm-5 ml-5">
