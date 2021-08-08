@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "./App";
+import { ThemeContext } from "./Layout";
 
 export default function Header() {
   const { theme, setTheme } = useContext(ThemeContext);
