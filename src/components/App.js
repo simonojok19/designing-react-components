@@ -6,10 +6,8 @@ import Layout from "./Layout";
 export default function App() {
   return (
     <Layout startingTheme="light">
-      <divs>
-        <Header />
-        <Speakers />
-      </divs>
+      <Header />
+      <Speakers />
     </Layout>
   );
 }
