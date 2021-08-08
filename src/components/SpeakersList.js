@@ -1,7 +1,7 @@
 import React from "react";
 import Speaker from "./Speaker";
 import ReactPlaceholder from "react-placeholder";
-import useRequest, { STATUS } from "../../hooks/useRequest";
+import useRequest, { STATUS } from "../hooks/useRequest";
 import { data } from "../../SpeakerData";
 
 export default function SpeakersList({ showSessions }) {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { data } from "../SpeakerData";
+import { data } from "../../SpeakerData";
 
 export const STATUS = {
   LOADING: "loading",
