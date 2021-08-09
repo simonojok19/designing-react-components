@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import useRequest from "../hooks/useRequest";
 import { SpeakerFilterContext } from "../contexts/SpeakerFilterContext";
 import SpeakerProvider, { SpeakerContext } from "../contexts/SpeakerContext";
+import SpeakerDelete from "./SpeakerDelete";
 
 const Session = ({ title, room }) => {
   return (
@@ -118,6 +119,7 @@ const Speaker = ({ speaker, updateRecord, insertRecord, deleteRecord }) => {
           <SpeakerImage />
           <SpeakerDemographics />
           {showSessions && <Sessions />}
+          <SpeakerDelete />
         </div>
       </div>
     </SpeakerProvider>

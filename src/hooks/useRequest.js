@@ -66,7 +66,7 @@ export default function useRequest(delayTime = 2000, initialData = []) {
 
   const deleteRecord = (record, doneCallback) => {
     const originalRecords = [...data];
-    const newRecords = data.find((r) => r.id !== record.id);
+    const newRecords = data.filter((r) => r.id !== record.id);
     async function delayFunction() {
       try {
         await delay(delayTime);
