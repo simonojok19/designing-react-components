@@ -3,7 +3,14 @@ import { ThemeContext } from "../contexts/ThemeContext";
 import { SpeakerFilterContext } from "../contexts/SpeakerFilterContext";
 export default function SpeakersToolbar() {
   const { theme, setTheme } = useContext(ThemeContext);
-  const { showSessions, setShowSessions } = useContext(SpeakerFilterContext);
+  const {
+    showSessions,
+    setShowSessions,
+    eventYear,
+    setEventYear,
+    setSearchQuery,
+    EVENT_YEAR,
+  } = useContext(SpeakerFilterContext);
 
   return (
     <section className="toolbar dark-theme-header">
@@ -35,6 +42,43 @@ export default function SpeakersToolbar() {
                 >
                   <option value="light">Light</option>
                   <option value="dark">Dark</option>
+                </select>
+              </label>
+            </li>
+            <li>
+              <div className="input-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search..."
+                  onChange={(event) => {
+                    setSearchQuery(event.target.value);
+                  }}
+                />
+                <div className="input-group-append">
+                  <button className="btn btn-secondary" type="button">
+                    <i className="fa fa-search" />
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li className="d-flex flex-column flex-md-row">
+              <strong>Year</strong>
+              <label htmlFor="" className="dropmenu">
+                <select
+                  name=""
+                  id=""
+                  className="form-control"
+                  value={eventYear}
+                  onChange={({ currentTarget }) => {
+                    setEventYear(currentTarget.value);
+                  }}
+                >
+                  {EVENT_YEAR.map((year) => (
+                    <option value={year} key={year}>
+                      {year}
+                    </option>
+                  ))}
                 </select>
               </label>
             </li>
