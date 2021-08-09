@@ -29,23 +29,21 @@ export default function useRequest(delayTime = 2000, initialData = []) {
   }, []);
 
   const updateRecord = (record, doneCallback) => {
-    return () => {
-      const records = data.map((rec) => {
-        return rec.id === record.id ? record : rec;
-      });
-      async function delayFunction() {
-        try {
-          await delay(delayTime);
-          if (doneCallback) {
-            doneCallback();
-          }
-          setData(records);
-        } catch (e) {
-          console.error("error thrown inside delayFunction", e);
+    const records = data.map((rec) => {
+      return rec.id === record.id ? record : rec;
+    });
+    async function delayFunction() {
+      try {
+        await delay(delayTime);
+        if (doneCallback) {
+          doneCallback();
         }
+        setData(records);
+      } catch (e) {
+        console.error("error thrown inside delayFunction", e);
       }
-      delayFunction().then();
-    };
+    }
+    delayFunction().then();
   };
   return { data, status, error, updateRecord };
 }
