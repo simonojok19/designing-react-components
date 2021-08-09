@@ -11,11 +11,12 @@ const Session = ({ title, room }) => {
   );
 };
 
-const Sessions = ({ sessions }) => {
+const Sessions = () => {
   const { eventYear } = useContext(SpeakerFilterContext);
+  const { speaker } = useContext(SpeakerContext);
   return (
     <div className="sessionBox card h-250">
-      {sessions
+      {speaker.sessions
         .filter((session) => session.eventYear === eventYear)
         .map((session) => (
           <Session className="session w-100" key={session.id} {...session} />
@@ -103,18 +104,14 @@ const SpeakerDemographics = () => {
 };
 
 const Speaker = ({ speaker, updateRecord }) => {
-  const { id, first, last, sessions } = speaker;
   const { showSessions } = useContext(SpeakerFilterContext);
   return (
     <SpeakerProvider speaker={speaker} updateRecord={updateRecord}>
-      <div
-        key={id}
-        className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-sm-12 col-xs-12"
-      >
+      <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-sm-12 col-xs-12">
         <div className="card card-height p-4 mt-4">
           <SpeakerImage />
           <SpeakerDemographics />
-          {showSessions && <Sessions sessions={sessions} />}
+          {showSessions && <Sessions />}
         </div>
       </div>
     </SpeakerProvider>
