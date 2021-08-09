@@ -31,34 +31,35 @@ export default function SpeakersList() {
         ready={STATUS !== STATUS.LOADING}
       >
         <div className="row">
-          {speakerData
-            .filter(
-              (speaker) =>
-                speaker.first.toLowerCase().includes(searchQuery) ||
-                speaker.last.toLowerCase().includes(searchQuery)
-            )
-            .filter((speaker) =>
-              speaker.sessions.find(
-                (session) => session.eventYear === eventYear
+          {speakerData &&
+            speakerData
+              .filter(
+                (speaker) =>
+                  speaker.first.toLowerCase().includes(searchQuery) ||
+                  speaker.last.toLowerCase().includes(searchQuery)
               )
-            ) &&
-            speakerData.map((speaker) => {
-              return (
-                <Speaker
-                  key={speaker.id}
-                  speaker={speaker}
-                  onFavoriteToggle={(doneCallback) => {
-                    updateRecord(
-                      {
-                        ...speaker,
-                        favorite: !speaker.favorite,
-                      },
-                      doneCallback
-                    );
-                  }}
-                />
-              );
-            })}
+              .filter((speaker) =>
+                speaker.sessions.find(
+                  (session) => session.eventYear === eventYear
+                )
+              )
+              .map((speaker) => {
+                return (
+                  <Speaker
+                    key={speaker.id}
+                    speaker={speaker}
+                    onFavoriteToggle={(doneCallback) => {
+                      updateRecord(
+                        {
+                          ...speaker,
+                          favorite: !speaker.favorite,
+                        },
+                        doneCallback
+                      );
+                    }}
+                  />
+                );
+              })}
         </div>
       </ReactPlaceholder>
     </div>
