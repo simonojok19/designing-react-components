@@ -19,9 +19,9 @@ export default function SpeakerAdd({ eventYear, insertRecord }) {
                 room: {
                   name: "Main Ball Room",
                 },
+                eventYear,
               },
             ],
-            eventYear,
           });
         }}
       >
