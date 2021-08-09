@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 export default function Header() {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <div className="padT4 padB4">
