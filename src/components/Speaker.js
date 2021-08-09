@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import useRequest from "../hooks/useRequest";
 import { SpeakerFilterContext } from "../contexts/SpeakerFilterContext";
+import SpeakerProvider, { SpeakerContext } from "../contexts/SpeakerContext";
 
 const Session = ({ title, room }) => {
   return (
@@ -23,7 +24,10 @@ const Sessions = ({ sessions }) => {
   );
 };
 
-const SpeakerImage = ({ id, first, last }) => {
+const SpeakerImage = () => {
+  const {
+    speaker: { id, first, last },
+  } = useContext(SpeakerContext);
   return (
     <div className="speaker-img d-flex flex-row justify-content-center align-items-center h-300">
       <img
@@ -99,16 +103,21 @@ const Speaker = ({ speaker, updateRecord }) => {
   const { id, first, last, sessions } = speaker;
   const { showSessions } = useContext(SpeakerFilterContext);
   return (
-    <div
-      key={id}
-      className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-sm-12 col-xs-12"
-    >
-      <div className="card card-height p-4 mt-4">
-        <SpeakerImage id={id} first={first} last={last} />
-        <SpeakerDemographics {...speaker} onFavoriteToggle={onFavoriteToggle} />
-        {showSessions && <Sessions sessions={sessions} />}
+    <SpeakerProvider speaker={speaker} updateRecord={updateRecord}>
+      <div
+        key={id}
+        className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-sm-12 col-xs-12"
+      >
+        <div className="card card-height p-4 mt-4">
+          <SpeakerImage />
+          <SpeakerDemographics
+            {...speaker}
+            onFavoriteToggle={onFavoriteToggle}
+          />
+          {showSessions && <Sessions sessions={sessions} />}
+        </div>
       </div>
-    </div>
+    </SpeakerProvider>
   );
 };
 
