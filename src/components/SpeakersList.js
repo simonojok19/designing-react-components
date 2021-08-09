@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import Speaker from "./Speaker";
 import ReactPlaceholder from "react-placeholder";
 import useRequest, { STATUS } from "../hooks/useRequest";
 import { data } from "../../SpeakerData";
+import { SpeakerFilterContext } from "../contexts/SpeakerFilterContext";
 
 export default function SpeakersList() {
   const {
@@ -11,6 +12,8 @@ export default function SpeakersList() {
     error,
     updateRecord,
   } = useRequest(2000, data);
+  const { searchQuery, eventYear } = useContext(SpeakerFilterContext);
+
   if (status === STATUS.FAILURE) {
     return (
       <div className="text-danger">
@@ -28,7 +31,17 @@ export default function SpeakersList() {
         ready={STATUS !== STATUS.LOADING}
       >
         <div className="row">
-          {speakerData &&
+          {speakerData
+            .filter(
+              (speaker) =>
+                speaker.first.toLowerCase().includes(searchQuery) ||
+                speaker.last.toLowerCase().includes(searchQuery)
+            )
+            .filter((speaker) =>
+              speaker.sessions.find(
+                (session) => session.eventYear === eventYear
+              )
+            ) &&
             speakerData.map((speaker) => {
               return (
                 <Speaker

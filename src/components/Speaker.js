@@ -17,7 +17,7 @@ const Sessions = ({ sessions }) => {
       {sessions
         .filter((session) => session.eventYear === eventYear)
         .map((session) => (
-          <Session {...session} />
+          <Session className="session w-100" key={session.id} {...session} />
         ))}
     </div>
   );
