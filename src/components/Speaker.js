@@ -11,9 +11,14 @@ const Session = ({ title, room }) => {
 };
 
 const Sessions = ({ sessions }) => {
+  const { eventYear } = useContext(SpeakerFilterContext);
   return (
     <div className="sessionBox card h-250">
-      <Session {...sessions[0]} />
+      {sessions
+        .filter((session) => session.eventYear === eventYear)
+        .map((session) => (
+          <Session {...session} />
+        ))}
     </div>
   );
 };
