@@ -3,7 +3,6 @@ import Speaker from "./Speaker";
 import ReactPlaceholder from "react-placeholder";
 import useRequest, { STATUS } from "../hooks/useRequest";
 import { data } from "../../SpeakerData";
-import { SpeakerFilterContext } from "../contexts/SpeakerFilterContext";
 
 export default function SpeakersList() {
   const {

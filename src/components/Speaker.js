@@ -16,10 +16,9 @@ const Sessions = ({ sessions }) => {
     <div className="sessionBox card h-250">
       {sessions
         .filter((session) => session.eventYear === eventYear)
-        .map((session) => {
-          console.log(session, "SESSION");
-          return <Session {...session} />;
-        })}
+        .map((session) => (
+          <Session {...session} />
+        ))}
     </div>
   );
 };
