@@ -95,7 +95,7 @@ const SpeakerDemographics = ({
   );
 };
 
-const Speaker = ({ speaker, onFavoriteToggle }) => {
+const Speaker = ({ speaker, updateRecord }) => {
   const { id, first, last, sessions } = speaker;
   const { showSessions } = useContext(SpeakerFilterContext);
   return (
