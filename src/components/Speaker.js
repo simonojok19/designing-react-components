@@ -76,8 +76,9 @@ const SpeakerFavorite = () => {
 };
 
 const SpeakerDemographics = () => {
-  const { first, last, bio, twitterHandle, company } =
-    useContext(SpeakerContext);
+  const {
+    speaker: { first, last, bio, twitterHandle, company },
+  } = useContext(SpeakerContext);
   return (
     <div className="speaker-info">
       <div className="d-flex justify-content-between mb-3">
