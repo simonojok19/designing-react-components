@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import useRequest from "../hooks/useRequest";
 import { SpeakerFilterContext } from "../contexts/SpeakerFilterContext";
 import SpeakerProvider, { SpeakerContext } from "../contexts/SpeakerContext";
@@ -40,37 +40,43 @@ const SpeakerImage = () => {
   );
 };
 
-const SpeakerFavorite = ({ favorite, onFavoriteToggle }) => {
+const SpeakerFavorite = () => {
+  const { speaker, updateRecord } = useContext(SpeakerContext);
+  const [inTransition, setInTransition] = useState(false);
   const doneCallback = () => {
-    console.log("Done Callback");
+    setInTransition(false);
   };
   return (
     <div className="action padB1">
       <span
         onClick={() => {
-          return onFavoriteToggle();
+          setInTransition(true);
+          updateRecord(
+            {
+              ...speaker,
+              favorite: !speaker.favorite,
+            },
+            doneCallback
+          );
         }}
       >
         <i
           className={
-            favorite === true ? "fa fa-star orange" : "fa fa-star-o orange"
+            speaker.favorite === true
+              ? "fa fa-star orange"
+              : "fa fa-star-o orange"
           }
         />{" "}
         Favorite{" "}
+        {inTransition && <span className="fas fa-circle-notch fa-spin" />}
       </span>
     </div>
   );
 };
 
-const SpeakerDemographics = ({
-  first,
-  last,
-  bio,
-  twitterHandle,
-  favorite,
-  company,
-  onFavoriteToggle,
-}) => {
+const SpeakerDemographics = () => {
+  const { first, last, bio, twitterHandle, company } =
+    useContext(SpeakerContext);
   return (
     <div className="speaker-info">
       <div className="d-flex justify-content-between mb-3">
@@ -78,10 +84,7 @@ const SpeakerDemographics = ({
           {first} {last}
         </h3>
       </div>
-      <SpeakerFavorite
-        favorite={favorite}
-        onFavoriteToggle={onFavoriteToggle}
-      />
+      <SpeakerFavorite />
       <div>
         <p className="card-description">{bio}</p>
         <div className="social d-flex flex-row mt-4">
@@ -110,10 +113,7 @@ const Speaker = ({ speaker, updateRecord }) => {
       >
         <div className="card card-height p-4 mt-4">
           <SpeakerImage />
-          <SpeakerDemographics
-            {...speaker}
-            onFavoriteToggle={onFavoriteToggle}
-          />
+          <SpeakerDemographics />
           {showSessions && <Sessions sessions={sessions} />}
         </div>
       </div>
