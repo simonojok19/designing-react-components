@@ -3,15 +3,15 @@ import Speaker from "./Speaker";
 import ReactPlaceholder from "react-placeholder";
 import useRequest, { STATUS } from "../hooks/useRequest";
 import { data } from "../../SpeakerData";
+import { SpeakerFilterContext } from "../contexts/SpeakerFilterContext";
 
-export default function SpeakersList({ showSessions }) {
+export default function SpeakersList() {
   const {
     data: speakerData,
     status,
     error,
     updateRecord,
   } = useRequest(2000, data);
-
   if (status === STATUS.FAILURE) {
     return (
       <div className="text-danger">
@@ -35,7 +35,6 @@ export default function SpeakersList({ showSessions }) {
                 <Speaker
                   key={speaker.id}
                   speaker={speaker}
-                  showSessions={showSessions}
                   onFavoriteToggle={(doneCallback) => {
                     updateRecord(
                       {

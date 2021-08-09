@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+import useRequest from "../hooks/useRequest";
+import { SpeakerFilterContext } from "../contexts/SpeakerFilterContext";
 
 const Session = ({ title, room }) => {
   return (
@@ -88,8 +90,9 @@ const SpeakerDemographics = ({
   );
 };
 
-const Speaker = ({ speaker, showSessions, onFavoriteToggle }) => {
+const Speaker = ({ speaker, onFavoriteToggle }) => {
   const { id, first, last, sessions } = speaker;
+  const { showSessions } = useContext(SpeakerFilterContext);
   return (
     <div
       key={id}
