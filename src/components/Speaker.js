@@ -104,7 +104,7 @@ const SpeakerDemographics = () => {
   );
 };
 
-const Speaker = ({ speaker, updateRecord }) => {
+const Speaker = ({ speaker, updateRecord, insertRecord, deleteRecord }) => {
   const { showSessions } = useContext(SpeakerFilterContext);
   return (
     <SpeakerProvider speaker={speaker} updateRecord={updateRecord}>

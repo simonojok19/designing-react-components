@@ -11,6 +11,8 @@ export default function SpeakersList() {
     status,
     error,
     updateRecord,
+    insertRecord,
+    deleteRecord,
   } = useRequest(2000, data);
   const { searchQuery, eventYear } = useContext(SpeakerFilterContext);
 
@@ -49,6 +51,8 @@ export default function SpeakersList() {
                     key={speaker.id}
                     speaker={speaker}
                     updateRecord={updateRecord}
+                    insertRecord={insertRecord}
+                    deleteRecord={deleteRecord}
                   />
                 );
               })}
