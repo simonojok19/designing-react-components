@@ -4,6 +4,7 @@ import ReactPlaceholder from "react-placeholder";
 import useRequest, { STATUS } from "../hooks/useRequest";
 import { data } from "../../SpeakerData";
 import { SpeakerFilterContext } from "../contexts/SpeakerFilterContext";
+import SpeakerAdd from "./SpeakerAdd";
 
 export default function SpeakersList() {
   const {
@@ -32,6 +33,7 @@ export default function SpeakersList() {
         className="speakerslist-placeholder"
         ready={STATUS !== STATUS.LOADING}
       >
+        <SpeakerAdd eventYear={eventYear} insertRecord={insertRecord} />
         <div className="row">
           {speakerData &&
             speakerData
