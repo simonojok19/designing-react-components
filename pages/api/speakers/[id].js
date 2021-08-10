@@ -45,15 +45,53 @@ export default async function handle(req, res) {
         );
         writeFile(
           jsonFile,
-          JSON.stringify({ speakers: newSpeakersArray }, null, 2)
+          JSON.stringify({ speakers: newSpeakersArray }, null, 2),
+          (data) => {
+            console.log(data);
+          }
         );
         res.setHeader("Content-Type", "application/json");
         res.status(200).send(JSON.stringify(recordBody, null, 2));
-        console.log("GET /api/speakers status: 200");
+        console.log("PUT /api/speakers status: 200");
       }
     } catch (e) {
-      console.log("/api/speakers error", e);
-      res.status(404).send("File Not Found on Server");
+      console.log("PUT /api/speakers error", e);
+      res
+        .status(500)
+        .send(`PUT /api/speakers/${id} status: 500 unexpected error`);
+    }
+  }
+
+  async function postMethod() {
+    try {
+      const readFileData = await readFile(jsonFile);
+      await delay(1000);
+      const speakers = JSON.parse(readFileData).speakers;
+      if (speakers) {
+        const idNew =
+          speakers.reduce((accumulator, currentValue) => {
+            const idCurrent = parseInt(currentValue.id);
+            return idCurrent > accumulator ? idCurrent : accumulator;
+          }, 0) + 1;
+
+        const newRec = { ...recordBody, id: idNew };
+        const newSpeakersArray = [newRec, ...speakers];
+        writeFile(
+          jsonFile,
+          JSON.stringify({ speakers: newSpeakersArray }, null, 2),
+          (data) => {
+            console.log(data);
+          }
+        );
+        res.setHeader("Content-Type", "application/json");
+        res.status(200).send(JSON.stringify(newRec, null, 2));
+        console.log("POST /api/speakers status: 200");
+      }
+    } catch (e) {
+      console.log("POST /api/speakers error", e);
+      res
+        .status(500)
+        .send(`POST /api/speakers/${id} status: 500 unexpected error`);
     }
   }
 }
