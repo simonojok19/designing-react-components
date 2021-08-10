@@ -25,7 +25,7 @@ export default function useRequest(delayTime = 2000, initialData = []) {
         setError(e);
       }
     }
-    delayFunc().then((r) => console.log(r));
+    delayFunc().then();
   }, []);
 
   const updateRecord = (record, doneCallback) => {
