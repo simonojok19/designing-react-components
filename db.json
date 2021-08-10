@@ -274,8 +274,8 @@
           "eventYear": "2012",
           "room": {
             "name": "4306",
-            "capacity": 100,
-          },
+            "capacity": 100
+          }
         },
         {
           "id": "1133",
@@ -283,8 +283,8 @@
           "eventYear": "2013",
           "room": {
             "name": "5502",
-            "capacity": 70,
-          },
+            "capacity": 70
+          }
         },
         {
           "id": "1136",
@@ -293,8 +293,8 @@
           "eventYear": "2013",
           "room": {
             "name": "8338",
-            "capacity": 120,
-          },
+            "capacity": 120
+          }
         },
         {
           "id": "1454",
@@ -302,8 +302,8 @@
           "eventYear": "2014",
           "room": {
             "name": "8338",
-            "capacity": 120,
-          },
+            "capacity": 120
+          }
         },
         {
           "id": "1455",
@@ -311,8 +311,8 @@
           "eventYear": "2014",
           "room": {
             "name": "5502",
-            "capacity": 70,
-          },
+            "capacity": 70
+          }
         },
         {
           "id": "4765",
@@ -321,8 +321,8 @@
           "eventYear": "2015",
           "room": {
             "name": "AB-201",
-            "capacity": 66,
-          },
+            "capacity": 66
+          }
         },
         {
           "id": "6080",
@@ -330,8 +330,8 @@
           "eventYear": "2016",
           "room": {
             "name": "RF-141",
-            "capacity": 58,
-          },
+            "capacity": 58
+          }
         },
         {
           "id": "6214",
@@ -339,8 +339,8 @@
           "eventYear": "2017",
           "room": {
             "name": "Town Square C",
-            "capacity": 130,
-          },
+            "capacity": 130
+          }
         },
         {
           "id": "7401",
@@ -348,8 +348,8 @@
           "eventYear": "2018",
           "room": {
             "name": "Round Table",
-            "capacity": 75,
-          },
+            "capacity": 75
+          }
         },
         {
           "id": "7402",
@@ -358,8 +358,8 @@
           "eventYear": "2018",
           "room": {
             "name": "Town Square B",
-            "capacity": 130,
-          },
+            "capacity": 130
+          }
         },
         {
           "id": "7460",
@@ -367,8 +367,8 @@
           "eventYear": "2018",
           "room": {
             "name": "Town Square B",
-            "capacity": 130,
-          },
+            "capacity": 130
+          }
         },
         {
           "id": "7515",
@@ -377,10 +377,10 @@
           "eventYear": "2019",
           "room": {
             "name": "Town Square C",
-            "capacity": 130,
-          },
-        },
-      ],
+            "capacity": 130
+          }
+        }
+      ]
     },
     {
       "id": "5443",
@@ -399,8 +399,8 @@
           "eventYear": "2011",
           "room": {
             "name": "8401",
-            "capacity": 48,
-          },
+            "capacity": 48
+          }
         },
         {
           "id": "677",
@@ -409,8 +409,8 @@
           "eventYear": "2011",
           "room": {
             "name": "5501",
-            "capacity": 70,
-          },
+            "capacity": 70
+          }
         },
         {
           "id": "859",
@@ -418,8 +418,8 @@
           "eventYear": "2012",
           "room": {
             "name": "3525",
-            "capacity": 110,
-          },
+            "capacity": 110
+          }
         },
         {
           "id": "861",
@@ -428,8 +428,8 @@
           "eventYear": "2012",
           "room": {
             "name": "3525",
-            "capacity": 110,
-          },
+            "capacity": 110
+          }
         },
         {
           "id": "1120",
@@ -438,8 +438,8 @@
           "eventYear": "2013",
           "room": {
             "name": "1501",
-            "capacity": 190,
-          },
+            "capacity": 190
+          }
         },
         {
           "id": "1125",
@@ -447,8 +447,8 @@
           "eventYear": "2013",
           "room": {
             "name": "PSEC4501",
-            "capacity": 73,
-          },
+            "capacity": 73
+          }
         },
         {
           "id": "1435",
@@ -457,8 +457,8 @@
           "eventYear": "2014",
           "room": {
             "name": "8402",
-            "capacity": 80,
-          },
+            "capacity": 80
+          }
         },
         {
           "id": "2577",
@@ -466,8 +466,8 @@
           "eventYear": "2014",
           "room": {
             "name": "8402",
-            "capacity": 80,
-          },
+            "capacity": 80
+          }
         },
         {
           "id": "4819",
@@ -475,8 +475,8 @@
           "eventYear": "2015",
           "room": {
             "name": "AC-162",
-            "capacity": 77,
-          },
+            "capacity": 77
+          }
         },
         {
           "id": "6184",
@@ -484,10 +484,10 @@
           "eventYear": "2017",
           "room": {
             "name": "Fireside D",
-            "capacity": 80,
-          },
-        },
-      ],
+            "capacity": 80
+          }
+        }
+      ]
     },
     {
       "id": "1124",
@@ -505,8 +505,8 @@
           "eventYear": "2008",
           "room": {
             "name": "Cornell Hall",
-            "capacity": 0,
-          },
+            "capacity": 0
+          }
         },
         {
           "id": "121",
@@ -514,8 +514,8 @@
           "eventYear": "2008",
           "room": {
             "name": "Cornell Hall",
-            "capacity": 0,
-          },
+            "capacity": 0
+          }
         },
         {
           "id": "176",
@@ -523,8 +523,8 @@
           "eventYear": "2009",
           "room": {
             "name": "5501",
-            "capacity": 70,
-          },
+            "capacity": 70
+          }
         },
         {
           "id": "177",
@@ -532,8 +532,8 @@
           "eventYear": "2009",
           "room": {
             "name": "5501",
-            "capacity": 70,
-          },
+            "capacity": 70
+          }
         },
         {
           "id": "371",
@@ -541,8 +541,8 @@
           "eventYear": "2010",
           "room": {
             "name": "1501",
-            "capacity": 190,
-          },
+            "capacity": 190
+          }
         },
         {
           "id": "536",
@@ -550,8 +550,8 @@
           "eventYear": "2010",
           "room": {
             "name": "1501",
-            "capacity": 190,
-          },
+            "capacity": 190
+          }
         },
         {
           "id": "588",
@@ -559,8 +559,8 @@
           "eventYear": "2011",
           "room": {
             "name": "1501",
-            "capacity": 190,
-          },
+            "capacity": 190
+          }
         },
         {
           "id": "589",
@@ -568,8 +568,8 @@
           "eventYear": "2011",
           "room": {
             "name": "1501",
-            "capacity": 190,
-          },
+            "capacity": 190
+          }
         },
         {
           "id": "833",
@@ -577,8 +577,8 @@
           "eventYear": "2012",
           "room": {
             "name": "SmithWick",
-            "capacity": 1000,
-          },
+            "capacity": 1000
+          }
         },
         {
           "id": "1056",
@@ -586,8 +586,8 @@
           "eventYear": "2012",
           "room": {
             "name": "SmithWick",
-            "capacity": 1000,
-          },
+            "capacity": 1000
+          }
         },
         {
           "id": "1198",
@@ -595,8 +595,8 @@
           "eventYear": "2013",
           "room": {
             "name": "SmithWick",
-            "capacity": 1000,
-          },
+            "capacity": 1000
+          }
         },
         {
           "id": "1199",
@@ -604,8 +604,8 @@
           "eventYear": "2013",
           "room": {
             "name": "SmithWick",
-            "capacity": 1000,
-          },
+            "capacity": 1000
+          }
         },
         {
           "id": "1390",
@@ -613,8 +613,8 @@
           "eventYear": "2014",
           "room": {
             "name": "Cornell Hall",
-            "capacity": 0,
-          },
+            "capacity": 0
+          }
         },
         {
           "id": "1416",
@@ -622,8 +622,8 @@
           "eventYear": "2014",
           "room": {
             "name": "SmithWick",
-            "capacity": 1000,
-          },
+            "capacity": 1000
+          }
         },
         {
           "id": "3643",
@@ -631,8 +631,8 @@
           "eventYear": "2014",
           "room": {
             "name": "1501",
-            "capacity": 190,
-          },
+            "capacity": 190
+          }
         },
         {
           "id": "3687",
@@ -640,8 +640,8 @@
           "eventYear": "2015",
           "room": {
             "name": "VPA-Theater",
-            "capacity": 395,
-          },
+            "capacity": 395
+          }
         },
         {
           "id": "3696",
@@ -649,8 +649,8 @@
           "eventYear": "2015",
           "room": {
             "name": "VPA-Theater",
-            "capacity": 395,
-          },
+            "capacity": 395
+          }
         },
         {
           "id": "4726",
@@ -658,8 +658,8 @@
           "eventYear": "2015sf",
           "room": {
             "name": "Cornell Hall",
-            "capacity": 0,
-          },
+            "capacity": 0
+          }
         },
         {
           "id": "5987",
@@ -667,8 +667,8 @@
           "eventYear": "2016",
           "room": {
             "name": "VPA-Theater",
-            "capacity": 395,
-          },
+            "capacity": 395
+          }
         },
         {
           "id": "6171",
@@ -676,8 +676,8 @@
           "eventYear": "2016",
           "room": {
             "name": "VPA-Theater",
-            "capacity": 395,
-          },
+            "capacity": 395
+          }
         },
         {
           "id": "6208",
@@ -685,8 +685,8 @@
           "eventYear": "2017",
           "room": {
             "name": "Town Square B",
-            "capacity": 130,
-          },
+            "capacity": 130
+          }
         },
         {
           "id": "6209",
@@ -694,8 +694,8 @@
           "eventYear": "2017",
           "room": {
             "name": "Town Square B",
-            "capacity": 130,
-          },
+            "capacity": 130
+          }
         },
         {
           "id": "7256",
@@ -703,8 +703,8 @@
           "eventYear": "2017",
           "room": {
             "name": "Town Square B",
-            "capacity": 130,
-          },
+            "capacity": 130
+          }
         },
         {
           "id": "7417",
@@ -712,8 +712,8 @@
           "eventYear": "2018",
           "room": {
             "name": "Town Square A",
-            "capacity": 130,
-          },
+            "capacity": 130
+          }
         },
         {
           "id": "7418",
@@ -721,8 +721,8 @@
           "eventYear": "2018",
           "room": {
             "name": "Fireside A",
-            "capacity": 80,
-          },
+            "capacity": 80
+          }
         },
         {
           "id": "7465",
@@ -730,8 +730,8 @@
           "eventYear": "2018",
           "room": {
             "name": "Town Square B",
-            "capacity": 130,
-          },
+            "capacity": 130
+          }
         },
         {
           "id": "7489",
@@ -739,8 +739,8 @@
           "eventYear": "2019",
           "room": {
             "name": "Town Square A",
-            "capacity": 130,
-          },
+            "capacity": 130
+          }
         },
         {
           "id": "7569",
@@ -748,10 +748,10 @@
           "eventYear": "2019",
           "room": {
             "name": "Town Square A",
-            "capacity": 130,
-          },
-        },
-      ],
+            "capacity": 130
+          }
+        }
+      ]
     },
     {
       "id": "10801",
@@ -768,8 +768,8 @@
           "eventYear": "2013",
           "room": {
             "name": "8338",
-            "capacity": 120,
-          },
+            "capacity": 120
+          }
         },
         {
           "id": "1444",
@@ -777,8 +777,8 @@
           "eventYear": "2014",
           "room": {
             "name": "4220",
-            "capacity": 50,
-          },
+            "capacity": 50
+          }
         },
         {
           "id": "1445",
@@ -786,8 +786,8 @@
           "eventYear": "2014",
           "room": {
             "name": "4220",
-            "capacity": 50,
-          },
+            "capacity": 50
+          }
         },
         {
           "id": "6085",
@@ -795,8 +795,8 @@
           "eventYear": "2016",
           "room": {
             "name": "Gullo II",
-            "capacity": 200,
-          },
+            "capacity": 200
+          }
         },
         {
           "id": "7242",
@@ -804,8 +804,8 @@
           "eventYear": "2017",
           "room": {
             "name": "Fireside D",
-            "capacity": 80,
-          },
+            "capacity": 80
+          }
         },
         {
           "id": "7346",
@@ -813,10 +813,10 @@
           "eventYear": "2018",
           "room": {
             "name": "Fireside A",
-            "capacity": 80,
-          },
-        },
-      ],
+            "capacity": 80
+          }
+        }
+      ]
     },
     {
       "id": "47343",
@@ -834,10 +834,10 @@
           "eventYear": "2019",
           "room": {
             "name": "Town Square B",
-            "capacity": 130,
-          },
-        },
-      ],
+            "capacity": 130
+          }
+        }
+      ]
     },
     {
       "id": "14918",
@@ -854,8 +854,8 @@
           "eventYear": "2015",
           "room": {
             "name": "RE-311",
-            "capacity": 68,
-          },
+            "capacity": 68
+          }
         },
         {
           "id": "6012",
@@ -863,8 +863,8 @@
           "eventYear": "2016",
           "room": {
             "name": "S-160",
-            "capacity": 60,
-          },
+            "capacity": 60
+          }
         },
         {
           "id": "7341",
@@ -872,8 +872,8 @@
           "eventYear": "2018",
           "room": {
             "name": "Town Square A",
-            "capacity": 130,
-          },
+            "capacity": 130
+          }
         },
         {
           "id": "7497",
@@ -881,10 +881,10 @@
           "eventYear": "2019",
           "room": {
             "name": "Fireside B",
-            "capacity": 80,
-          },
-        },
-      ],
+            "capacity": 80
+          }
+        }
+      ]
     },
     {
       "id": "46769",
@@ -902,10 +902,10 @@
           "eventYear": "2019",
           "room": {
             "name": "Fireside A",
-            "capacity": 80,
-          },
-        },
-      ],
+            "capacity": 80
+          }
+        }
+      ]
     },
     {
       "id": "8367",
@@ -923,8 +923,8 @@
           "eventYear": "2012",
           "room": {
             "name": "SmithWick",
-            "capacity": 1000,
-          },
+            "capacity": 1000
+          }
         },
         {
           "id": "1086",
@@ -933,8 +933,8 @@
           "eventYear": "2013",
           "room": {
             "name": "SmithWick",
-            "capacity": 1000,
-          },
+            "capacity": 1000
+          }
         },
         {
           "id": "1412",
@@ -942,8 +942,8 @@
           "eventYear": "2014",
           "room": {
             "name": "SmithWick",
-            "capacity": 1000,
-          },
+            "capacity": 1000
+          }
         },
         {
           "id": "1413",
@@ -951,8 +951,8 @@
           "eventYear": "2014",
           "room": {
             "name": "5015",
-            "capacity": 217,
-          },
+            "capacity": 217
+          }
         },
         {
           "id": "3701",
@@ -960,8 +960,8 @@
           "eventYear": "2015",
           "room": {
             "name": "VPA-Theater",
-            "capacity": 395,
-          },
+            "capacity": 395
+          }
         },
         {
           "id": "3703",
@@ -969,8 +969,8 @@
           "eventYear": "2015",
           "room": {
             "name": "SC-127",
-            "capacity": 250,
-          },
+            "capacity": 250
+          }
         },
         {
           "id": "5984",
@@ -978,8 +978,8 @@
           "eventYear": "2016",
           "room": {
             "name": "VPA-Theater",
-            "capacity": 395,
-          },
+            "capacity": 395
+          }
         },
         {
           "id": "5986",
@@ -988,8 +988,8 @@
           "eventYear": "2016",
           "room": {
             "name": "SC-127",
-            "capacity": 250,
-          },
+            "capacity": 250
+          }
         },
         {
           "id": "6227",
@@ -997,8 +997,8 @@
           "eventYear": "2017",
           "room": {
             "name": "Fireside B",
-            "capacity": 80,
-          },
+            "capacity": 80
+          }
         },
         {
           "id": "6229",
@@ -1006,8 +1006,8 @@
           "eventYear": "2017",
           "room": {
             "name": "Town Square B",
-            "capacity": 130,
-          },
+            "capacity": 130
+          }
         },
         {
           "id": "7366",
@@ -1015,8 +1015,8 @@
           "eventYear": "2018",
           "room": {
             "name": "Town Square A",
-            "capacity": 130,
-          },
+            "capacity": 130
+          }
         },
         {
           "id": "7367",
@@ -1024,8 +1024,8 @@
           "eventYear": "2018",
           "room": {
             "name": "Town Square A",
-            "capacity": 130,
-          },
+            "capacity": 130
+          }
         },
         {
           "id": "7368",
@@ -1033,10 +1033,10 @@
           "eventYear": "2018",
           "room": {
             "name": "Town Square B",
-            "capacity": 130,
-          },
-        },
-      ],
+            "capacity": 130
+          }
+        }
+      ]
     },
     {
       "id": "620",
@@ -1054,8 +1054,8 @@
           "eventYear": "2008",
           "room": {
             "name": "Cornell Hall",
-            "capacity": 0,
-          },
+            "capacity": 0
+          }
         },
         {
           "id": "6089",
@@ -1063,8 +1063,8 @@
           "eventYear": "2016",
           "room": {
             "name": "C209",
-            "capacity": 55,
-          },
+            "capacity": 55
+          }
         },
         {
           "id": "7440",
@@ -1072,8 +1072,8 @@
           "eventYear": "2018",
           "room": {
             "name": "Fireside A",
-            "capacity": 80,
-          },
+            "capacity": 80
+          }
         },
         {
           "id": "7551",
@@ -1081,10 +1081,10 @@
           "eventYear": "2019",
           "room": {
             "name": "Town Square B",
-            "capacity": 130,
-          },
-        },
-      ],
-    },
+            "capacity": 130
+          }
+        }
+      ]
+    }
   ]
 }
