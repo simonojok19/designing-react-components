@@ -6,7 +6,7 @@ export const STATUS = {
   FAILURE: "failure",
 };
 
-const BASE_URL = "api/speakers";
+const BASE_URL = "/api/speakers";
 
 export default function useRequestAPI() {
   const [data, setData] = useState();
@@ -23,7 +23,7 @@ export default function useRequestAPI() {
         setData(result.data);
       } catch (e) {
         setStatus(STATUS.FAILURE);
-        setError(e);
+        // setError(e);
       }
     }
     delayFunc().then();
