@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
+import { withAuth } from "./withAuth";
 
-export default function Header() {
+const Header = () => {
   const { theme } = useContext(ThemeContext);
-
   return (
     <div className="padT4 padB4">
       <div className="container mobile-container">
@@ -24,4 +24,6 @@ export default function Header() {
       </div>
     </div>
   );
-}
+};
+
+export default withAuth(Header);
