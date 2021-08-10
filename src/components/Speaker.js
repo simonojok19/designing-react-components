@@ -1,8 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { memo, useContext, useState } from "react";
 import useRequest from "../hooks/useRequest";
 import { SpeakerFilterContext } from "../contexts/SpeakerFilterContext";
 import SpeakerProvider, { SpeakerContext } from "../contexts/SpeakerContext";
 import SpeakerDelete from "./SpeakerDelete";
+import ErrorBoundary from "./ErrorBoundary";
 
 const Session = ({ title, room }) => {
   return (
@@ -117,24 +118,35 @@ const SpeakerDemographics = () => {
   );
 };
 
-const Speaker = ({ speaker, updateRecord, insertRecord, deleteRecord }) => {
-  const { showSessions } = useContext(SpeakerFilterContext);
-  return (
-    <SpeakerProvider
-      speaker={speaker}
-      updateRecord={updateRecord}
-      insertRecord={insertRecord}
-      deleteRecord={deleteRecord}
-    >
-      <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-sm-12 col-xs-12">
-        <div className="card card-height p-4 mt-4">
-          <SpeakerImage />
-          <SpeakerDemographics />
-          {showSessions && <Sessions />}
-          <SpeakerDelete />
+const SpeakerNoErrorBoundary = memo(
+  ({ speaker, updateRecord, insertRecord, deleteRecord }) => {
+    const { showSessions } = useContext(SpeakerFilterContext);
+    return (
+      <SpeakerProvider
+        speaker={speaker}
+        updateRecord={updateRecord}
+        insertRecord={insertRecord}
+        deleteRecord={deleteRecord}
+      >
+        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-sm-12 col-xs-12">
+          <div className="card card-height p-4 mt-4">
+            <SpeakerImage />
+            <SpeakerDemographics />
+            {showSessions && <Sessions />}
+            <SpeakerDelete />
+          </div>
         </div>
-      </div>
-    </SpeakerProvider>
+      </SpeakerProvider>
+    );
+  },
+  (prev, next) => prev.speaker.favorite === next.speaker.favorite
+);
+
+const Speaker = (props) => {
+  return (
+    <ErrorBoundary>
+      <SpeakerNoErrorBoundary {...props} />
+    </ErrorBoundary>
   );
 };
 
