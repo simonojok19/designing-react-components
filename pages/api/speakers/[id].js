@@ -94,4 +94,38 @@ export default async function handle(req, res) {
         .send(`POST /api/speakers/${id} status: 500 unexpected error`);
     }
   }
+
+  async function deleteMethod() {
+    try {
+      const readFileData = await readFile(jsonFile);
+      await delay(1000);
+      const speakers = JSON.parse(readFileData).speakers;
+      if (speakers) {
+        const newSpeakersArray = speakers.filter(
+          (speaker) => speaker.id !== id
+        );
+        writeFile(
+          jsonFile,
+          JSON.stringify({ speakers: newSpeakersArray }, null, 2),
+          (data) => {
+            console.log(data);
+          }
+        );
+        res.setHeader("Content-Type", "application/json");
+        res.status(200).send(
+          JSON.stringify(
+            speakers.filter((rec) => rec.id === id),
+            null,
+            2
+          )
+        );
+        console.log("DELETE /api/speakers status: 200");
+      }
+    } catch (e) {
+      console.log("DELETE /api/speakers error", e);
+      res
+        .status(500)
+        .send(`DELETE /api/speakers/${id} status: 500 unexpected error`);
+    }
+  }
 }
