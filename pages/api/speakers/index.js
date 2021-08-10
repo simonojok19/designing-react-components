@@ -10,7 +10,6 @@ const delay = (ms) =>
   });
 
 export default async function handle(req, res) {
-  // res.status(200).send(JSON.stringify(data, null, 2));
   const jsonFile = path.resolve("./", "db.json");
   try {
     const readFileData = await readFile(jsonFile);
