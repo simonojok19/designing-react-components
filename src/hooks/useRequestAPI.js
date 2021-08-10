@@ -23,7 +23,7 @@ export default function useRequestAPI() {
         setData(result.data);
       } catch (e) {
         setStatus(STATUS.FAILURE);
-        // setError(e);
+        setError(e);
       }
     }
     delayFunc().then();

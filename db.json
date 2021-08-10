@@ -1,12 +1,26 @@
 {
   "speakers": [
     {
+      "id": 47344,
+      "first": "Simon",
+      "last": "Ojok",
+      "sessions": [
+        {
+          "id": "88888",
+          "title": "New Session for Simon",
+          "room": {
+            "name": "Main Ball Room"
+          },
+          "eventYear": "2019"
+        }
+      ]
+    },
+    {
       "id": "1269",
       "first": "Arun",
       "last": "Gupta",
       "company": "Amazon",
-      "bio":
-      "Arun Gupta is a Principal Open Source Technologist at Amazon Web Services. ",
+      "bio": "Arun Gupta is a Principal Open Source Technologist at Amazon Web Services. ",
       "twitterHandle": "arungupta",
       "favorite": true,
       "sessions": [
@@ -48,8 +62,7 @@
         },
         {
           "id": "264",
-          "title":
-          "Using Eclipse for Java EE 6 development for the GlassFish™ Application Server",
+          "title": "Using Eclipse for Java EE 6 development for the GlassFish™ Application Server",
           "eventYear": "2009",
           "room": {
             "name": "5503",
@@ -94,8 +107,7 @@
         },
         {
           "id": "766",
-          "title":
-          "Deploy and Monitor your Java EE 6 session in a fully-clustered GlassFish",
+          "title": "Deploy and Monitor your Java EE 6 session in a fully-clustered GlassFish",
           "eventYear": "2011",
           "room": {
             "name": "4201",
@@ -221,8 +233,7 @@
         },
         {
           "id": "6060",
-          "title":
-          "Package, Deploy, Scale Your Applications Using Docker and Kubernetes",
+          "title": "Package, Deploy, Scale Your Applications Using Docker and Kubernetes",
           "eventYear": "2016fall",
           "room": {
             "name": "Cornell Hall",
@@ -263,8 +274,7 @@
       "first": "Chris",
       "last": "Richardson",
       "company": "Eventuate, Inc",
-      "bio":
-      "Founder of Eventuate, Author of POJOs in Action, creator of the original Cloud Foundry",
+      "bio": "Founder of Eventuate, Author of POJOs in Action, creator of the original Cloud Foundry",
       "twitterHandle": "crichardson",
       "favorite": false,
       "sessions": [
@@ -288,8 +298,7 @@
         },
         {
           "id": "1136",
-          "title":
-          "Consuming web services asynchronously with Futures and Rx Observables",
+          "title": "Consuming web services asynchronously with Futures and Rx Observables",
           "eventYear": "2013",
           "room": {
             "name": "8338",
@@ -316,8 +325,7 @@
         },
         {
           "id": "4765",
-          "title":
-          "Developing event-driven microservices with event sourcing and CQRS",
+          "title": "Developing event-driven microservices with event sourcing and CQRS",
           "eventYear": "2015",
           "room": {
             "name": "AB-201",
@@ -353,8 +361,7 @@
         },
         {
           "id": "7402",
-          "title":
-          "Microservices: Decomposing Applications for Testability and Deployability",
+          "title": "Microservices: Decomposing Applications for Testability and Deployability",
           "eventYear": "2018",
           "room": {
             "name": "Town Square B",
@@ -372,8 +379,7 @@
         },
         {
           "id": "7515",
-          "title":
-          "Cubes, Hexagons and More: Understanding the Microservices Through Shapes",
+          "title": "Cubes, Hexagons and More: Understanding the Microservices Through Shapes",
           "eventYear": "2019",
           "room": {
             "name": "Town Square C",
@@ -387,15 +393,13 @@
       "first": "Mark",
       "last": "Abramson",
       "company": "Printform Corporation",
-      "bio":
-      "Mark is a globally recognized expert on digital printing for industrial and packaging applications.",
+      "bio": "Mark is a globally recognized expert on digital printing for industrial and packaging applications.",
       "twitterHandle": "mark__a",
       "favorite": true,
       "sessions": [
         {
           "id": "676",
-          "title":
-          "Accelerate your database development with Object-Relational Mapping (OR/M) in .NET",
+          "title": "Accelerate your database development with Object-Relational Mapping (OR/M) in .NET",
           "eventYear": "2011",
           "room": {
             "name": "8401",
@@ -404,8 +408,7 @@
         },
         {
           "id": "677",
-          "title":
-          "Introduction to Database Design with Entity Relationship (ER) Diagrams",
+          "title": "Introduction to Database Design with Entity Relationship (ER) Diagrams",
           "eventYear": "2011",
           "room": {
             "name": "5501",
@@ -423,8 +426,7 @@
         },
         {
           "id": "861",
-          "title":
-          "Introduction to Database Design with Entity Relationship (ER) Diagrams",
+          "title": "Introduction to Database Design with Entity Relationship (ER) Diagrams",
           "eventYear": "2012",
           "room": {
             "name": "3525",
@@ -433,8 +435,7 @@
         },
         {
           "id": "1120",
-          "title":
-          "Intro to Relational Database Design & Entity-Relationship Diagrams",
+          "title": "Intro to Relational Database Design & Entity-Relationship Diagrams",
           "eventYear": "2013",
           "room": {
             "name": "1501",
@@ -452,8 +453,7 @@
         },
         {
           "id": "1435",
-          "title":
-          "Intro to Relational Database Design & Entity-Relationship Diagrams",
+          "title": "Intro to Relational Database Design & Entity-Relationship Diagrams",
           "eventYear": "2014",
           "room": {
             "name": "8402",
@@ -494,8 +494,7 @@
       "first": "Douglas",
       "last": "Crockford",
       "company": "PayPal",
-      "bio":
-      "Douglas Crockford discovered the JSON Data Interchange Format. He is also the author of _JavaScript: The Good Parts_. He has been called a guru, but he is actually more of a mahatma.",
+      "bio": "Douglas Crockford discovered the JSON Data Interchange Format. He is also the author of _JavaScript: The Good Parts_. He has been called a guru, but he is actually more of a mahatma.",
       "twitterHandle": "notatweeter",
       "favorite": true,
       "sessions": [
@@ -823,8 +822,7 @@
       "first": "Eve",
       "last": "Porcello",
       "company": "Moon Highway",
-      "bio":
-      "Eve Porcello is an instructor at Moon Highway, egghead.io, and LinkedIn Learning.",
+      "bio": "Eve Porcello is an instructor at Moon Highway, egghead.io, and LinkedIn Learning.",
       "twitterHandle": "eveporcello",
       "favorite": true,
       "sessions": [
@@ -891,8 +889,7 @@
       "first": "Mary",
       "last": "Grygleski",
       "company": "IBM",
-      "bio":
-      "Mary is a passionate developer advocate by day, and a very active tech community organizer by night.",
+      "bio": "Mary is a passionate developer advocate by day, and a very active tech community organizer by night.",
       "twitterHandle": "mgrygles",
       "favorite": true,
       "sessions": [
@@ -912,8 +909,7 @@
       "first": "Gayle Laakmann",
       "last": "McDowell",
       "company": "CareerCup",
-      "bio":
-      "Gayle Laakmann McDowell is the founder and CEO of CareerCup.com and the author of three books.",
+      "bio": "Gayle Laakmann McDowell is the founder and CEO of CareerCup.com and the author of three books.",
       "twitterHandle": "gayle",
       "favorite": false,
       "sessions": [
@@ -928,8 +924,7 @@
         },
         {
           "id": "1086",
-          "title":
-          "Cracking the Coding Interview: Advice for Devs and PM Interviews",
+          "title": "Cracking the Coding Interview: Advice for Devs and PM Interviews",
           "eventYear": "2013",
           "room": {
             "name": "SmithWick",
@@ -983,8 +978,7 @@
         },
         {
           "id": "5986",
-          "title":
-          "Be a Better Interviewer: How to Interview Like Google (or not)-But Better!",
+          "title": "Be a Better Interviewer: How to Interview Like Google (or not)-But Better!",
           "eventYear": "2016",
           "room": {
             "name": "SC-127",
@@ -1049,8 +1043,7 @@
       "sessions": [
         {
           "id": "86",
-          "title":
-          "The Performance Limitations  of the Java Platform ... and how to avoid them",
+          "title": "The Performance Limitations  of the Java Platform ... and how to avoid them",
           "eventYear": "2008",
           "room": {
             "name": "Cornell Hall",
