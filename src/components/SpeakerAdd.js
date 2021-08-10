@@ -1,6 +1,8 @@
 import React from "react";
+import { withAuth } from "./withAuth";
 
-export default function SpeakerAdd({ eventYear, insertRecord }) {
+const SpeakerAdd = ({ eventYear, insertRecord, user }) => {
+  if (!user || user.length === 0) return null;
   return (
     <a href="#" className="addSes">
       <i
@@ -29,4 +31,6 @@ export default function SpeakerAdd({ eventYear, insertRecord }) {
       </i>
     </a>
   );
-}
+};
+
+export default withAuth(SpeakerAdd);
