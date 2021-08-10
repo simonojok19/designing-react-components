@@ -5,6 +5,7 @@ import useRequest, { STATUS } from "../hooks/useRequest";
 import { data } from "../../SpeakerData";
 import { SpeakerFilterContext } from "../contexts/SpeakerFilterContext";
 import SpeakerAdd from "./SpeakerAdd";
+import useRequestAPI from "../hooks/useRequestAPI";
 
 export default function SpeakersList() {
   const {
@@ -14,7 +15,7 @@ export default function SpeakersList() {
     updateRecord,
     insertRecord,
     deleteRecord,
-  } = useRequest(2000, data);
+  } = useRequestAPI();
   const { searchQuery, eventYear } = useContext(SpeakerFilterContext);
 
   if (status === STATUS.FAILURE) {
