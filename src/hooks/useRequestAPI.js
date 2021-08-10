@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { data } from "../../SpeakerData";
-
+import axios from "axios";
 export const STATUS = {
   LOADING: "loading",
   SUCCESS: "success",
   FAILURE: "failure",
 };
+
+const BASE_URL = "api/speakers";
 
 export default function useRequestAPI() {
   const [data, setData] = useState();
@@ -17,9 +18,9 @@ export default function useRequestAPI() {
   useEffect(() => {
     async function delayFunc() {
       try {
-        await delay(delayTime);
+        const result = await axios.get(BASE_URL);
         setStatus(STATUS.SUCCESS);
-        setData(data);
+        setData(result.data);
       } catch (e) {
         setStatus(STATUS.FAILURE);
         setError(e);
@@ -35,7 +36,7 @@ export default function useRequestAPI() {
     });
     async function delayFunction() {
       try {
-        await delay(delayTime);
+        await axios.put(`${BASE_URL}/${record.id}`, record);
         if (doneCallback) {
           doneCallback();
         }
@@ -52,7 +53,7 @@ export default function useRequestAPI() {
     const newRecords = [record, ...data];
     async function delayFunction() {
       try {
-        await delay(delayTime);
+        await axios.post(`${BASE_URL}/9999`, record);
         if (doneCallback) {
           doneCallback();
         }
@@ -69,7 +70,7 @@ export default function useRequestAPI() {
     const newRecords = data.filter((r) => r.id !== record.id);
     async function delayFunction() {
       try {
-        await delay(delayTime);
+        await axios.delete(`${BASE_URL}/${record.id}`, record);
         if (doneCallback) {
           doneCallback();
         }
