@@ -2,7 +2,38 @@ import React, { useContext } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { withAuth } from "./withAuth";
 
-const Header = () => {
+const LoggedIn = ({ user, setUser }) => {
+  return (
+    <div>
+      <span>Logged in as {user}</span>
+      <button
+        className="btn btn-secondary"
+        onClick={() => {
+          setUser("");
+        }}
+      >
+        Logout
+      </button>
+    </div>
+  );
+};
+
+const NotLoggedIn = ({ user, setUser }) => {
+  return (
+    <button
+      className="btn btn-secondary"
+      onClick={(event) => {
+        event.preventDefault();
+        const username = window.prompt("Enter Login Name: ", "");
+        setUser(username);
+      }}
+    >
+      Login
+    </button>
+  );
+};
+
+const Header = ({ user, setUser }) => {
   const { theme } = useContext(ThemeContext);
   return (
     <div className="padT4 padB4">
@@ -15,10 +46,11 @@ const Header = () => {
             <h4 className="header-title">Silicon Valley Code Camp</h4>
           </div>
           <div className={theme === "light" ? "" : "text-info"}>
-            Hello Mr. Smith &nbsp;&nbsp;
-            <span>
-              <a href="#">sign-out</a>
-            </span>
+            {user && user.length > 0 ? (
+              <LoggedIn user={user} setUser={setUser} />
+            ) : (
+              <NotLoggedIn user={user} setUser={setUser} />
+            )}
           </div>
         </div>
       </div>
